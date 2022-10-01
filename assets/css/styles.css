@@ -1,0 +1,203 @@
+/* IMPORT GOOGLE FONTS */
+
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap');
+
+
+/* DECLARE CSS VARIABLES */
+
+:root {
+
+    /* Colors */
+
+    --color-soft-blue: hsl(215, 51%, 70%);
+    --color-cyan: hsl(178, 100%, 50%);
+    --color-white: hsl(0, 0%, 100%);
+    --colorBG-darkblue-main: hsl(217, 54%, 11%);
+    --colorBG-darkblue-card: hsl(216, 50%, 16%);
+    --colorBG-darkblue-line: hsl(215, 32%, 27%);
+    --colorBG-cyan-hover: hsla(178, 100%, 50%, 0.5);
+
+    /* Typography */
+
+    --ff-outfit: 'Outfit', sans-serif;
+    --fs-text: 1.8rem;
+    --fw-300: 300;
+    --fw-400: 400;
+    --fw-600: 600;
+
+}
+
+/* RESET DEFAULT CSS STYLES */
+
+
+*, *::before, *::after {
+
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+html {
+
+    font-size: 10px;
+
+}
+
+body {
+
+    font-family: var(--ff-outfit);
+    font-size: var(--fs-text);
+    font-weight: var(--fw-300);
+    background-color: var(--colorBG-darkblue-main);
+    color: var(--color-soft-blue);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+p {
+
+    line-height: 1.5;
+
+}
+
+img {
+
+    max-width: 100%;
+
+}
+
+a {
+
+    text-decoration: none;
+    color: var(--color-white);
+    cursor: pointer;
+
+}
+
+
+/* CUSTOM CSS STYLES */
+
+
+main {
+    width: 100%;
+    max-width: 350px;
+    background-color: var(--colorBG-darkblue-card);
+    padding: 2.5rem;
+    border-radius: 20px;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2);
+    
+}
+
+section {
+    
+    position: relative;
+    max-width: 100%;
+    border-radius: 10px;
+    cursor: pointer;
+    overflow: hidden;
+    
+}
+
+
+section >* {
+    
+    border-radius: 10px;
+    
+}
+
+.active-bg {
+    
+    display: none;
+    position: absolute;
+    background-color: var(--colorBG-cyan-hover);
+    width: 100%;
+    top: 0;
+    right: 0;
+    bottom: 5px;
+    left: 0;
+    z-index: 5;
+    
+}
+
+.icon--view {
+    
+    display: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    z-index: 10;
+    
+}
+
+h1 {
+    
+    font-size: 2.5rem;
+    font-weight: var(--fw-600);
+    color: var(--color-white);
+    margin: 2rem 0;
+    
+}
+
+main > div {
+    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 2rem 0;
+    padding-bottom: 2rem;
+    border-bottom: 2px solid var(--colorBG-darkblue-line);
+    
+}
+
+main > div > p:first-child {
+    color: var(--color-cyan);
+    font-weight: var(--fw-400);
+}
+
+main > div > p > img {
+
+    /* width: 15px; */
+    vertical-align: middle;
+    margin-bottom: 0.4rem;
+    margin-right: 0.5rem;
+    
+}
+
+main > p > img {
+    
+    width: 36px;
+    border-radius: 50%;
+    margin-right: 1.5rem;
+    vertical-align: middle;
+    border: 2px solid var(--color-white);
+    
+}
+
+
+/* HOVER & ACTIVE STATE CSS STYLES */
+
+
+main > section:hover .active-bg,
+main > section:active .active-bg,
+main > section:hover .icon--view,
+main > section:active .icon--view  {
+    
+    display: block;
+    
+}
+
+main > h1 > a:hover,
+main > h1 > a:active,
+main > p > a:hover,
+main > p > a:active {
+
+    color: var(--color-cyan);
+
+}
