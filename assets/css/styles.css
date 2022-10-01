@@ -92,7 +92,7 @@ main {
     
 }
 
-section {
+.image--container {
     
     position: relative;
     max-width: 100%;
@@ -103,7 +103,7 @@ section {
 }
 
 
-section >* {
+.image--container >* {
     
     border-radius: 10px;
     
@@ -145,7 +145,7 @@ h1 {
     
 }
 
-main > div {
+.content--container {
     
     display: flex;
     justify-content: space-between;
@@ -156,12 +156,12 @@ main > div {
     
 }
 
-main > div > p:first-child {
+.content--container > p:first-child {
     color: var(--color-cyan);
     font-weight: var(--fw-400);
 }
 
-main > div > p > img {
+.content--container > p > img {
 
     /* width: 15px; */
     vertical-align: middle;
@@ -184,10 +184,10 @@ main > p > img {
 /* HOVER & ACTIVE STATE CSS STYLES */
 
 
-main > section:hover .active-bg,
-main > section:active .active-bg,
-main > section:hover .icon--view,
-main > section:active .icon--view  {
+.image--container:hover .active-bg,
+.image--container:active .active-bg,
+.image--container:hover .icon--view,
+.image--container:active .icon--view  {
     
     display: block;
     
